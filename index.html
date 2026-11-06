@@ -23,10 +23,12 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 @keyframes glowIn{from{opacity:0}to{opacity:1}}
 @keyframes hdrIn{from{background-color:transparent}}
 @keyframes nameIn{from{color:var(--ink)}}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:#fff;opacity:0}
+@keyframes veil{from{opacity:1}to{opacity:0}}
+@media (prefers-color-scheme:dark){body::after{background:#0a0d07}}
 @media (prefers-color-scheme:dark){@keyframes bodyIn{from{background-color:#0a0d07}}}
 @media (prefers-reduced-motion:no-preference){
-  body{animation:bodyIn 2.6s ease-out both}
-  body::before{animation:glowIn 2.6s ease-out both}
+  body::after{animation:veil 3.2s ease-in-out both}
   header{animation:hdrIn 2.6s ease-out both}
   .hero h1 b,.logo i{animation:nameIn 2.6s ease-out both}
 }
@@ -53,8 +55,10 @@ nav ul a:hover,nav ul a[aria-current="page"]{border-color:var(--accent);color:va
   #v-home.on .hero p.lead{animation:heroRise 1s cubic-bezier(.22,.7,.2,1) 1.25s both}
 }
 /* hero */
-.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center;padding:48px 0 72px;min-height:calc(100vh - 68px)}
-.hero h1{font-weight:500;font-size:clamp(40px,6vw,76px);line-height:1.02;letter-spacing:-.02em;margin:0 0 16px}
+.hero{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:center;padding:48px 0 72px;min-height:calc(100vh - 68px)}
+.hero h1{font-weight:500;font-size:clamp(30px,4.8vw,60px);line-height:1.02;letter-spacing:-.02em;margin:0 0 16px}
+.hero h1 .hi{font-size:.8em}
+.hero h1 b{white-space:nowrap}
 .hero h1 b{color:var(--accent);font-weight:500;display:block}
 .hero .role{font-family:var(--sans);font-size:22px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:0 0 22px;color:var(--olive-d)}
 .hero p.lead{max-width:44ch;color:var(--muted);margin:0}
@@ -185,7 +189,7 @@ footer{padding:84px 0 48px}
 <div class="view on" id="v-home"><main class="wrap">
   <div class="hero">
     <div>
-      <h1>Hi, I’m <b>Morganah Dafne B. Wandag.</b></h1>
+      <h1><span class="hi">Hi, I’m</span> <b>Morganah Dafne B.<br>Wandag.</b></h1>
       <p class="role">Multimedia Arts Student</p>
       <p class="lead">I am eager to contribute my technical skills and passion for visual storytelling to your company. I am committed to continuous learning, collaboration, and creating engaging visual content.</p>
     </div>
