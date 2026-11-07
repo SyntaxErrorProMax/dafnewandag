@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Morganah Dafne B. Wandag – Multimedia Arts Portfolio</title>
+<title>Dark Blue-Green Preview – Morganah Dafne B. Wandag – Multimedia Arts Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -128,11 +128,13 @@ section{padding:72px 0 0}
 .ico{font-size:54px;line-height:1}
 .uc h2{font-family:var(--sans);font-weight:500;font-size:clamp(28px,4vw,40px);margin:14px 0 8px;color:var(--olive-d)}
 .uc p{margin:0;color:var(--muted)}
-#v-personal .page>h1{margin-bottom:36px}
+#v-personal .page{padding-top:22px}
+#v-personal footer{padding:0}
+#v-personal .page>h1{margin-bottom:18px;font-size:clamp(26px,3.2vw,38px)}
 .pi{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}
-.pside{background:linear-gradient(170deg,#6F8B3A,#355020);color:#F4F8E4;border-radius:28px;padding:36px 28px;text-align:center;position:sticky;top:90px}
+.pside{background:linear-gradient(170deg,#6F8B3A,#355020);color:#F4F8E4;border-radius:28px;padding:26px 26px;text-align:center;position:sticky;top:90px}
 .mono{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;background:#F8F9EC;color:#355020;font-family:var(--sans);font-weight:700;font-size:34px;letter-spacing:.04em}
-.pphoto{position:relative;overflow:hidden;width:124px;height:124px;border-radius:50%;margin:0 auto 18px;background:#fff;border:4px solid #F8F9EC;box-shadow:0 14px 30px -14px rgba(0,0,0,.55)}
+.pphoto{position:relative;overflow:hidden;width:104px;height:104px;border-radius:50%;margin:0 auto 12px;background:#fff;border:4px solid #F8F9EC;box-shadow:0 14px 30px -14px rgba(0,0,0,.55)}
 .pphoto img{position:absolute;display:block;width:150%;max-width:none;left:-23%;top:-4%}
 @keyframes photoIn{from{opacity:0;transform:translateY(14px) scale(.82)}to{opacity:1;transform:none}}
 @keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -140,21 +142,22 @@ section{padding:72px 0 0}
   .view.on{animation:viewIn .55s cubic-bezier(.22,.7,.2,1) both}
   .view.on .pphoto{animation:photoIn 1s cubic-bezier(.22,.7,.2,1) .12s both}
 }
-.pside h2{font-family:var(--sans);font-weight:500;font-size:24px;line-height:1.2;margin:0 0 6px}
-.prole{font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin:0 0 22px;opacity:.85}
-.pside dl{margin:0;padding-top:20px;border-top:1px solid rgba(244,248,228,.3);text-align:left;display:grid;gap:12px;font-size:15px}
+.pside h2{font-family:var(--sans);font-weight:500;font-size:22px;line-height:1.2;margin:0 0 6px}
+.prole{font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin:0 0 14px;opacity:.85}
+.pside dl{margin:0;padding-top:14px;border-top:1px solid rgba(244,248,228,.3);text-align:left;display:grid;gap:8px;font-size:15px}
 .pside dt{font-family:var(--sans);font-size:13px;opacity:.75}
 .pside a{text-decoration:underline;text-underline-offset:3px}
 .pside a:hover{opacity:.8}
 .pside dd{margin:0;overflow-wrap:anywhere}
-.pmain{display:grid;gap:22px}
-.pblock{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 30px}
-.pblock h3{font-size:22px;font-weight:500;margin:0 0 16px}
-.rows{margin:0;display:grid}
-.rows div{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
-.rows div:first-child{border-top:0;padding-top:0}
+.pmain{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pmain .pblock:first-child{grid-column:1/-1}
+.pblock{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px 24px}
+.pblock h3{font-size:22px;font-weight:500;margin:0 0 10px}
+.rows{margin:0;display:grid;grid-auto-flow:column;grid-template-rows:repeat(4,auto);grid-template-columns:auto auto;justify-content:space-between;column-gap:28px}
+.rows div{display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:baseline;padding:9px 0;border-top:1px solid var(--line)}
+.rows div:nth-child(1),.rows div:nth-child(5){border-top:0;padding-top:0}
 .rows dt{font-family:var(--sans);color:var(--muted);font-size:15px}
-.rows dd{margin:0}
+.rows dd{margin:0;font-size:15px}
 .tags{display:flex;flex-wrap:wrap;gap:10px}
 .tags span{font-family:var(--sans);font-size:15px;padding:8px 18px;border-radius:999px;background:color-mix(in srgb,var(--lime) 55%,var(--card));color:var(--ink)}
 footer{padding:84px 0 48px}
@@ -169,7 +172,9 @@ footer{padding:84px 0 48px}
   nav{gap:14px}
   .pi{grid-template-columns:1fr}
   .pside{position:static}
-  .rows div{grid-template-columns:1fr;gap:2px}
+  .pmain{grid-template-columns:1fr}
+  .rows{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+  .rows div:nth-child(5){border-top:1px solid var(--line);padding-top:9px}
   nav ul{gap:18px;flex:1;min-width:0;overflow-x:auto;white-space:nowrap;font-size:14px;scrollbar-width:none}
   .info{grid-template-columns:1fr}
   .ach .card{grid-template-columns:1fr;gap:8px}
@@ -178,6 +183,15 @@ footer{padding:84px 0 48px}
   .glass{right:0}
   .portrait{max-width:320px}
 }
+/* ---- DARK BLUE-GREEN (TEAL) THEME PREVIEW ---- */
+:root:root:root{--cream:#06302A;--card:rgba(7,50,40,.62);--ink:#FBF4E3;--muted:#BBCBAE;--olive:#2E8F68;--olive-d:#F0D9A0;--accent:#6FE3B0;--lime:#2A8A62;--tan:#176050;--line:rgba(251,244,227,.18)}
+body::after{background:#03201A!important}
+body{background:linear-gradient(160deg,#04231E 0%,#0A4237 40%,#1F7A5E 80%,#3C8A5C 100%) fixed!important}
+body::before{background:radial-gradient(60% 50% at 95% 0%,rgba(242,196,107,.24),transparent 70%),radial-gradient(45% 35% at 0% 60%,rgba(60,138,92,.3),transparent 70%)!important}
+.logo i{color:#F2C46B}
+.pside{background:linear-gradient(180deg,#2A8F68 0%,#136B55 50%,#0A3A30 100%)}
+.pphoto,.mono{border-color:#FBF4E3}
+.tags span{color:#FBF4E3;background:color-mix(in srgb,var(--lime) 85%,var(--card))}
 </style>
 </head>
 <body>
@@ -212,9 +226,9 @@ footer{padding:84px 0 48px}
       <dl><div><dt>Email</dt><dd>wandagdafne@gmail.com</dd></div><div><dt>Cell phone</dt><dd>0963 162 0310</dd></div><div><dt>Facebook</dt><dd><a href="https://www.facebook.com/dafne.wandag" target="_blank" rel="noopener noreferrer">facebook.com/dafne.wandag</a></dd></div></dl>
     </aside>
     <div class="pmain">
-      <div class="pblock"><h3>Basics</h3><dl class="rows"><div><dt>Full name</dt><dd>Morganah Dafne B. Wandag</dd></div><div><dt>Date of Birth</dt><dd>January 3, 2005</dd></div><div><dt>Location</dt><dd>Baguio City, Philippines</dd></div><div><dt>Program</dt><dd>Multimedia Arts</dd></div><div><dt>Year level</dt><dd>First Year</dd></div><div><dt>School</dt><dd>University of the Cordilleras</dd></div><div><dt>Languages</dt><dd>English, Filipino</dd></div></dl></div>
+      <div class="pblock"><dl class="rows"><div><dt>Full name</dt><dd>Morganah Dafne B. Wandag</dd></div><div><dt>Date of Birth</dt><dd>January 3, 2005</dd></div><div><dt>Location</dt><dd>Baguio City, Philippines</dd></div><div><dt>Languages</dt><dd>English, Filipino</dd></div><div><dt>Program</dt><dd>Multimedia Arts</dd></div><div><dt>Year level</dt><dd>First Year</dd></div><div><dt>School</dt><dd>University of the Cordilleras</dd></div></dl></div>
       <div class="pblock"><h3>Hard Skills</h3><div class="tags"><span>Canva</span><span>MS Word</span><span>Video and Film Production</span><span>Adobe Creative Suite (Learning)</span></div></div>
-      <div class="pblock"><h3>Soft Skills</h3><div class="tags"><span>Collaboration</span><span>Communication</span><span>Detailed-oriented</span><span>Organization</span></div></div>
+      <div class="pblock"><h3>Soft Skills</h3><div class="tags"><span>Collaboration</span><span>Communication</span><span>Detailed-oriented</span><span>Organization</span><span>Planning</span></div></div>
     </div>
   </div>
   <footer></footer>
